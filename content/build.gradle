@@ -160,6 +160,7 @@ prepareSandbox {
 
 publishPlugin {
     token = "${PublishToken}"
+    channels(!version.contains("-") ? 'Stable' : 'EAP')
 
     doLast {
         exec {
